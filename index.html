@@ -144,6 +144,10 @@
 									<a class="dropdown-item" href="elements.html">Elements</a>
 								</div>
 							</li>
+							<select onchange="languageChanger()" id="google_translate_element">
+								<option value="en">English</option>
+								<option value="hi">Hindi</option>
+							</select>
 						</ul>
 					</div>
 				</div>
@@ -647,6 +651,29 @@
 		</div>
 	</footer>
 	<!-- End footer Area -->
+
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	<script type="text/javascript">
+		function googleTranslateElementInit(){
+			new google.translate.TranslateElement({
+				pageLanguage : "en"
+			}, 'google_translate_element');
+		}
+		const languageChanger = () => {
+			var language=document.getElementById("google_translate_element").value;
+			var selectField=document.querySelector("#google_translate_element select");
+			for(var i=0; i< selectField.children.length; i++)
+			{
+				var option = selectField.children[i];
+				if(option.value == language){
+					selectField.selectedIndex=i;
+					selectField.dispatchEvent(new Event('change'));
+					break;
+				}
+			}
+		}
+	</script>
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"

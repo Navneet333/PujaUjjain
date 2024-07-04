@@ -97,11 +97,12 @@ $('.active-blog-slider').owlCarousel({
         dots: true,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 5000,
         smartSpeed: 1000,
         animateOut: 'fadeOut',
       })
 
+      
 
     // Select all links with hashes
     $('.navbar-nav a[href*="#"]')
