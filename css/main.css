@@ -2125,7 +2125,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: #fd9457;
+  background: linear-gradient(#ff8f4f 0%, #e92b2c 100%);
 }
 
 .dropdown-item {
