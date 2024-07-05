@@ -30,80 +30,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<style>
-		.item-slider {
-			position: relative;
-			overflow: hidden;
-		}
 
-		.background-video {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transform: translate(-50%, -50%);
-			z-index: -1;
-		}
-
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.3);
-		}
-
-		.banner-content h1 {
-			font-size: 80px;
-		}
-
-		.banner-content p {
-			font-size: 18px;
-		}
-
-		@media (max-width: 768px) {
-			.banner-content h1 {
-				font-size: 40px;
-			}
-
-			.banner-content p {
-				font-size: 16px;
-			}
-
-			.banner-content h4 {
-				font-size: 16px;
-			}
-		}
-
-		@media (min-width: 769px) and (max-width: 1024px) {
-			.banner-content h1 {
-				font-size: 60px;
-			}
-
-			.banner-content p {
-				font-size: 18px;
-			}
-
-			.banner-content h4 {
-				font-size: 18px;
-			}
-		}
-
-		@media (max-width: 480px) {
-			.banner-content h1 {
-				font-size: 30px;
-			}
-
-			.banner-content p {
-				font-size: 14px;
-			}
-
-			.banner-content h4 {
-				font-size: 14px;
-			}
-		}
 	</style>
 
 </head>
@@ -111,53 +38,43 @@
 <body>
 	<!-- start banner Area -->
 	<section class="banner-area" id="home">
-		<!-- Start Header Area -->
 		<header class="default-header">
-			<nav class="navbar navbar-expand-lg  navbar-light">
+			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<a class="navbar-brand" href="index.html">
-						<!-- <img src="img/logo.png" alt=""> -->
-						<h3 style="color: white; font-weight: 600;">PujaUjjain</h3>
+						<h3 style="color: #e92b2c; font-weight: 600;">PujaUjjain</h3>
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="text-white lnr lnr-menu"></span>
 					</button>
-
-					<div class="collapse navbar-collapse justify-content-end align-items-center"
-						id="navbarSupportedContent">
+	
+					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 						<ul class="navbar-nav">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#secvice">Service</a></li>
-							<li><a href="#gallery">Gallery</a></li>
-							<li><a href="#faq">Faq</a></li>
-							<li><a href="#contact">Contact</a></li>
-							<!-- Dropdown -->
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-									Pages
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="generic.html">Generic</a>
-									<a class="dropdown-item" href="elements.html">Elements</a>
-								</div>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#home">Home</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#service">Service</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#gallery">Gallery</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#faq">Faq</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#contact">Contact</a></li>
+							<li class="nav-item dropdown">
+								<select onchange="languageChanger()" id="google_translate_element"
+									class="form-control form-control-sm">
+									<option value="en">English</option>
+									<option value="hi">Hindi</option>
+								</select>
 							</li>
-							<select onchange="languageChanger()" id="google_translate_element">
-								<option value="en">English</option>
-								<option value="hi">Hindi</option>
-							</select>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
-		<!-- End Header Area -->
 	</section>
+	
 
 	<section class="default-banner active-blog-slider">
-		<div class="item-slider relative" style="background: url(img/slider1.jpg); background-size: cover;">
+		<div class="item-slider relative" style="background: url(img/slider3.jpg); background-size: cover;">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row fullscreen justify-content-center align-items-center" style="height: 100vh;">
@@ -165,14 +82,17 @@
 						<div class="banner-content text-center">
 							<h4 class="text-white mb-20 text-uppercase">Anushthan Mandapam and Samadhan Kendra</h4>
 							<h1 class="text-uppercase text-white">Sacred Rituals and Spiritual Solutions</h1>
-							<p class="text-white">Anushthan Mandapam and Samadhan Kendra, led by Pandit Nitesh Sharma (Ved Vibhushan), offers a range of services. From melodious Bhagwat Katha to home harmonization (Griha Shanti) and planetary remedies (Mangal Shanti), discover transformative rituals.</p>
+							<p class="text-white">Anushthan Mandapam and Samadhan Kendra, led by Pandit Nitesh Sharma
+								(Ved Vibhushan), offers a range of services. From melodious Bhagwat Katha to home
+								harmonization (Griha Shanti) and planetary remedies (Mangal Shanti), discover
+								transformative rituals.</p>
 							<a href="#" class="text-uppercase header-btn">Contact Us</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="item-slider relative" style="background: url(img/slider2.jpg); background-size: cover;">
 			<div class="overlay"></div>
 			<div class="container">
@@ -181,31 +101,27 @@
 						<div class="banner-content text-center">
 							<h4 class="text-white mb-20 text-uppercase">About Pandit Nitesh Sharma</h4>
 							<h1 class="text-uppercase text-white responsive-title">Ved Vibhushan’s Spiritual Legacy</h1>
-							<p class="text-white">Pandit Nitesh Sharma, rooted in Vedic wisdom, combines tradition with compassion. His expertise spans yajnas, Janam Patrika analysis, and more. Seek guidance from this spiritual legacy.</p>
+							<p class="text-white">Pandit Nitesh Sharma, rooted in Vedic wisdom, combines tradition with
+								compassion. His expertise spans yajnas, Janam Patrika analysis, and more. Seek guidance
+								from this spiritual legacy.</p>
 							<a href="#" class="text-uppercase header-btn">Contact Us</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="item-slider relative" style="position: relative; overflow: hidden;">
-			<video autoplay muted loop playsinline class="background-video">
-				<source src="img/slider3.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-			<div class="overlay"
-				style="background: rgba(0,0,0,.3); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-			</div>
-			<div class="container" style="position: relative; z-index: 1;">
+		<div class="item-slider relative" style="background: url(img/slider1.jpg); background-size: cover;">
+			<div class="overlay"></div>
+			<div class="container">
 				<div class="row fullscreen justify-content-center align-items-center" style="height: 100vh;">
 					<div class="col-md-10 col-12">
 						<div class="banner-content text-center">
 							<h4 class="text-white mb-20 text-uppercase">Seek Guidance from Janam Patrika</h4>
-							<h1 class="text-uppercase text-white responsive-title">Cosmic Insights<br>Your Birth Chart
+							<h1 class="text-uppercase text-white responsive-title">Cosmic Insights<br> Your Birth Chart
 							</h1>
-							<p class="text-white" style="font-size: 18px;">Unlock planetary secrets with Janam Patrika.
+							<p class="text-white">Unlock planetary secrets with Janam Patrika.
 								Discover doshas, life events, strengths, and spiritual pathways. Pandit Nitesh Sharma
-								interprets your celestial map. Navigate wisely. 🙏🕉️</p>
+								interprets your celestial map. Navigate wisely. 🙏🕉️.</p>
 							<a href="#" class="text-uppercase header-btn">Contact Us</a>
 						</div>
 					</div>
@@ -213,114 +129,125 @@
 			</div>
 		</div>
 
-		</div>
+
+
 	</section>
 
-			<!-- Start about Area -->
-			<section class="section-gap info-area" id="about">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-40 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10" style="font-size: 60px;">About Us</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
+	<!-- Start about Area -->
+	<section class="section-gap info-area" id="about">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-40 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10" style="font-size: 60px;">About Us</h1>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>
+				</div>
+			</div>
+			<div class="single-info row mt-40">
+				<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
+					<div class="info-thumb">
+						<img src="img/panditji.jpg" class="img-fluid" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 no-padding info-rigth">
+					<div class="info-content">
+						<h2 class="pb-20">🌟Meet Pandit Nitesh Sharma🌟</h2>
+						<h2 class="pb-40" style="text-align: center;"> (Ved Vibhushan)</h2>
+
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Rooted in Tradition :</b> Pandit Nitesh comes from a lineage of learned priests,
+								steeped in Vedic wisdom.
+							</li>
+						</ul>
+
+						<br>
+						<p>
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Compassionate Approach :</b> He combines tradition with compassion, ensuring that
+								every ritual resonates with seekers’ needs.
+							</li>
+						</ul>
+						</p>
+						<br>
+						<p>
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Expertise :</b> From Bhagwat Katha to Janam Patrika analysis, Pandit Nitesh offers
+								personalized services.
+							</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End about Area -->
+
+
+	<!-- Start project Area -->
+	<section class="project-area section-gap" id="project">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-30 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10">Latest Project on the go</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							<br> labore et dolore magna aliqua.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center d-flex">
+				<div class="active-works-carousel mt-40 col-lg-8">
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Vector Illustration</h6>
+							<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work
+								have <br> allowed humanity to create slimmer, more portable technology.</p>
 						</div>
-					</div>					
-					<div class="single-info row mt-40">
-						<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
-							<div class="info-thumb">
-								<img src="img/panditji.jpg" class="img-fluid" alt="">
-							</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Vector Illustration</h6>
+							<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work
+								have <br> allowed humanity to create slimmer, more portable technology.</p>
 						</div>
-						<div class="col-lg-6 col-md-12 no-padding info-rigth">
-							<div class="info-content">
-								<h2 class="pb-20">🌟Meet Pandit Nitesh Sharma🌟</h2>
-								<h2 class="pb-40" style="text-align: center;"> (Ved Vibhushan)</h2>
-								
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Rooted in Tradition :</b> Pandit Nitesh comes from a lineage of learned priests, steeped in Vedic wisdom.
-										</li>
-									</ul>
-								
-								<br>
-								<p>
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Compassionate Approach :</b> He combines tradition with compassion, ensuring that every ritual resonates with seekers’ needs.
-										</li>
-									</ul>
-								</p>
-								<br>
-								<p>
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Expertise :</b> From Bhagwat Katha to Janam Patrika analysis, Pandit Nitesh offers personalized services.
-										</li>
-									</ul>
-								</p>
-								</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Vector Illustration</h6>
+							<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work
+								have <br> allowed humanity to create slimmer, more portable technology.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Vector Illustration</h6>
+							<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work
+								have <br> allowed humanity to create slimmer, more portable technology.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Vector Illustration</h6>
+							<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work
+								have <br> allowed humanity to create slimmer, more portable technology.</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- End about Area -->
-			
-			
-			<!-- Start project Area -->
-			<section class="project-area section-gap" id="project">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-30 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Latest Project on the go</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore  et dolore magna aliqua.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row justify-content-center d-flex">
-						<div class="active-works-carousel mt-40 col-lg-8">
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase">Vector Illustration</h6>
-									<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase">Vector Illustration</h6>
-									<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase">Vector Illustration</h6>
-									<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase">Vector Illustration</h6>
-									<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase">Vector Illustration</h6>
-									<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End project Area -->
+			</div>
+		</div>
+	</section>
+	<!-- End project Area -->
 
 
 	<!-- Start feature Area -->
@@ -652,22 +579,22 @@
 	</footer>
 	<!-- End footer Area -->
 
-	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script type="text/javascript"
+		src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 	<script type="text/javascript">
-		function googleTranslateElementInit(){
+		function googleTranslateElementInit() {
 			new google.translate.TranslateElement({
-				pageLanguage : "en"
+				pageLanguage: "en"
 			}, 'google_translate_element');
 		}
 		const languageChanger = () => {
-			var language=document.getElementById("google_translate_element").value;
-			var selectField=document.querySelector("#google_translate_element select");
-			for(var i=0; i< selectField.children.length; i++)
-			{
+			var language = document.getElementById("google_translate_element").value;
+			var selectField = document.querySelector("#google_translate_element select");
+			for (var i = 0; i < selectField.children.length; i++) {
 				var option = selectField.children[i];
-				if(option.value == language){
-					selectField.selectedIndex=i;
+				if (option.value == language) {
+					selectField.selectedIndex = i;
 					selectField.dispatchEvent(new Event('change'));
 					break;
 				}
