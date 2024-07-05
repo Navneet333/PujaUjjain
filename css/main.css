@@ -1967,6 +1967,26 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
+.counter {
+  font-size: 48px;
+  font-weight: 900;
+  background: -moz-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  background: -webkit-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  background: -ms-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plus {
+  font-size: 48px;
+  font-weight: 900;
+  background: -moz-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  background: -webkit-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  background: -ms-linear-gradient(0deg, #ff8f4f 0%, #e92b2c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .primary-btn {
   line-height: 42px;
   padding-left: 30px;
