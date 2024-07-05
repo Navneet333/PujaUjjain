@@ -27,7 +27,48 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<style>
+		.video-area {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			background-color: #000;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
 
+		.container {
+			max-width: 1200px;
+			width: 100%;
+			padding: 0 20px;
+		}
+
+		.video-content {
+			position: relative;
+			padding-bottom: 56.25%;
+			/* 16:9 aspect ratio */
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+			background: #000;
+		}
+
+		.video-content iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		@media (max-width: 768px) {
+			.video-content {
+				padding-bottom: 75%;
+				/* Adjust for smaller screens if needed */
+			}
+		}
 	</style>
 
 </head>
@@ -46,15 +87,19 @@
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="text-white lnr lnr-menu"></span>
 					</button>
-	
+
 					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 						<ul class="navbar-nav">
 							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#home">Home</a></li>
-							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#about">About</a></li>
-							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#service">Service</a></li>
-							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#gallery">Gallery</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#about">About</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#service">Service</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#gallery">Gallery</a>
+							</li>
 							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#faq">Faq</a></li>
-							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: #ffffff;" href="#contact">Contact</a>
+							</li>
 							<li class="nav-item dropdown">
 								<select onchange="languageChanger()" id="google_translate_element"
 									class="form-control form-control-sm">
@@ -68,7 +113,7 @@
 			</nav>
 		</header>
 	</section>
-	
+
 
 	<section class="default-banner active-blog-slider">
 		<div class="item-slider relative" style="background: url(img/slider3.jpg); background-size: cover;">
@@ -130,132 +175,144 @@
 
 	</section>
 
-			<!-- Start about Area -->
-			<section class="section-gap info-area" id="about">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-40 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10" style="font-size: 60px;">About Us</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
+	<!-- Start about Area -->
+	<section class="section-gap info-area" id="about">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-40 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10" style="font-size: 60px;">About Us</h1>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>
+				</div>
+			</div>
+			<div class="single-info row mt-40">
+				<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
+					<div class="info-thumb">
+						<img src="img/panditji.jpg" class="img-fluid" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 no-padding info-rigth">
+					<div class="info-content">
+						<h2 class="pb-20">🌟Meet Pandit Nitesh Sharma🌟</h2>
+						<h2 class="pb-40" style="text-align: center;"> (Ved Vibhushan)</h2>
+
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Rooted in Tradition :</b> Pandit Nitesh comes from a lineage of learned priests,
+								steeped in Vedic wisdom.
+							</li>
+						</ul>
+
+						<br>
+						<p>
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Compassionate Approach :</b> He combines tradition with compassion, ensuring that
+								every ritual resonates with seekers’ needs.
+							</li>
+						</ul>
+						</p>
+
+						<p>
+						<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
+							<li>
+								<b>Expertise :</b> From Bhagwat Katha to Janam Patrika analysis, Pandit Nitesh offers
+								personalized services.
+							</li>
+						</ul>
+						<br>
+						<p>
+							<center>
+								<b style="font-size: 20px; font-weight: 500;">Follow now:</b> <a
+									href="https://www.facebook.com/share/bqD2tqWt3RTj75WM/?mibextid=qi2Omg"><i
+										style="color: coral;" class="fa fa-facebook"></i></a>
+								 |<a style="color: rgb(0, 0, 0); font-weight: 500;" href="tel:+91 97550 50665">+91 97550 50665</a>
+							</center>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End about Area -->
+
+
+	<!-- Start project Area -->
+	<section class="project-area section-gap" id="project">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-30 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10" style="font-size: 60px;">Types of Puja</h1>
+						<p style="font-size: 18px;">Puja is a fundamental practice in Hinduism, encompassing various
+							rituals and offerings. Here are brief descriptions of common types of puja :</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center d-flex">
+				<div class="active-works-carousel mt-40 col-lg-8">
+					<div class="item">
+						<img class="img-fluid" src="img/why.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Sangitmay Bhagwat Katha</h4>
+							<p style="font-size: 20px;"> Melodious narratives of Lord Krishna’s divine stories</p>
 						</div>
-					</div>					
-					<div class="single-info row mt-40">
-						<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
-							<div class="info-thumb">
-								<img src="img/panditji.jpg" class="img-fluid" alt="">
-							</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why1.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Griha Shanti</h4>
+							<p style="font-size: 20px;">Restore home harmony through rituals</p>
 						</div>
-						<div class="col-lg-6 col-md-12 no-padding info-rigth">
-							<div class="info-content">
-								<h2 class="pb-20">🌟Meet Pandit Nitesh Sharma🌟</h2>
-								<h2 class="pb-40" style="text-align: center;"> (Ved Vibhushan)</h2>
-								
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Rooted in Tradition :</b> Pandit Nitesh comes from a lineage of learned priests, steeped in Vedic wisdom.
-										</li>
-									</ul>
-								
-								<br>
-								<p>
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Compassionate Approach :</b> He combines tradition with compassion, ensuring that every ritual resonates with seekers’ needs.
-										</li>
-									</ul>
-								</p>
-								<br>
-								<p>
-									<ul style="list-style-type: circle; font-size: 20px; font-weight: 500;">
-										<li>
-											<b>Expertise :</b> From Bhagwat Katha to Janam Patrika analysis, Pandit Nitesh offers personalized services.
-										</li>
-									</ul>
-								</p>
-								</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why2.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Vastu Shanti</h4>
+							<p style="font-size: 20px;">Align your dwelling with positive energies</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why3.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Mangal Shanti</h4>
+							<p style="font-size: 20px;">Pacify malefic effects of Mars</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why4.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Kaal Sarpa Dosh Puja</h4>
+							<p style="font-size: 20px;">Seek relief from doshas</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why5.png" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Janam Patrika</h4>
+							<p style="font-size: 20px;">Decode life insights</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why6.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Yajna Prana Pratishtha</h4>
+							<p style="font-size: 20px;">Invoke divine energy</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/why7.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h4 class="text-uppercase" style="font-size: 30px;">Muhurat Vichar</h4>
+							<p style="font-size: 20px;">Expert guidance on auspicious timings</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- End about Area -->
-			
-			
-			<!-- Start project Area -->
-			<section class="project-area section-gap" id="project">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-30 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10" style="font-size: 60px;">Types of Puja</h1>
-								<p style="font-size: 18px;">Puja is a fundamental practice in Hinduism, encompassing various rituals and offerings. Here are brief descriptions of common types of puja :</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row justify-content-center d-flex">
-						<div class="active-works-carousel mt-40 col-lg-8">
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h4 class="text-uppercase" style="font-size: 30px;">Sangitmay Bhagwat Katha</h4>
-									<p style="font-size: 20px;"> Melodious narratives of Lord Krishna’s divine stories</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Griha Shanti</h6>
-									<p style="font-size: 20px;">Restore home harmony through rituals</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Vastu Shanti</h6>
-									<p style="font-size: 20px;">Align your dwelling with positive energies</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Mangal Shanti</h6>
-									<p style="font-size: 20px;">Pacify malefic effects of Mars</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Kaal Sarpa Dosh Puja</h6>
-									<p style="font-size: 20px;">Seek relief from doshas</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Janam Patrika</h6>
-									<p style="font-size: 20px;">Decode life insights</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Yajna Prana Pratishtha</h6>
-									<p style="font-size: 20px;">Invoke divine energy</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-fluid" src="img/why.jpg" alt="">
-								<div class="caption text-center mt-20">
-									<h6 class="text-uppercase" style="font-size: 30px;">Muhurat Vichar</h6>
-									<p style="font-size: 20px;">Expert guidance on auspicious timings</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End project Area -->
+			</div>
+		</div>
+	</section>
+	<!-- End project Area -->
 
 
 	<!-- Start feature Area -->
@@ -373,50 +430,45 @@
 				<div class="counter-left col-lg-3 col-md-3">
 					<div class="single-facts">
 						<h2 class="counter">5962</h2>
-						<p>Projects Completed</p>
+						<p>Puja completed</p>
 					</div>
 					<div class="single-facts">
-						<h2 class="counter">2394</h2>
-						<p>New Projects</p>
+						<h2 class="counter">394</h2>
+						<p>Puja Inline</p>
 					</div>
-					<div class="single-facts">
-						<h2 class="counter">1439</h2>
-						<p>Tickets Submitted</p>
-					</div>
-					<div class="single-facts">
-						<h2 class="counter">933</h2>
-						<p>Cup of Coffee</p>
-					</div>
+
 				</div>
 				<div class="faq-content col-lg-9 col-md-9">
 					<div class="single-faq">
 						<h2 class="text-uppercase">
-							Are your Templates responsive?
+							What types of puja services do you offer?
 						</h2>
 						<p>
-							“Few would argue that, despite the advancements of feminism over the past three decades,
-							women still face a double standard when it comes to their behavior. While men’s
-							borderline-inappropriate behavior.
+							We offer a wide range of puja services including Grah Pravesh, Satyanarayan Katha,
+							Rudrabhishek, Navagraha Shanti Puja, and personalized rituals for various occasions. Our
+							experienced pandits are well-versed in Vedic rituals and ensure that all ceremonies are
+							performed according to traditional practices.
 						</p>
 					</div>
 					<div class="single-faq">
 						<h2 class="text-uppercase">
-							Does it have all the plugin as mentioned?
-						</h2>
+							How can I book a pandit for my puja? </h2>
 						<p>
-							“Few would argue that, despite the advancements of feminism over the past three decades,
-							women still face a double standard when it comes to their behavior. While men’s
-							borderline-inappropriate behavior.
+							Booking a pandit is easy! You can visit our "Book a Pandit" page on the website, fill out
+							the required details such as your preferred date, time, and type of puja. Alternatively, you
+							can use the "Contact Us" option on the website to reach our team, and they will assist you
+							in scheduling the puja.
 						</p>
 					</div>
 					<div class="single-faq">
 						<h2 class="text-uppercase">
-							Can i use the these theme for my client?
+							What are the charges for different puja services?
+
 						</h2>
 						<p>
-							“Few would argue that, despite the advancements of feminism over the past three decades,
-							women still face a double standard when it comes to their behavior. While men’s
-							borderline-inappropriate behavior.
+							The charges for puja services vary depending on the type and duration of the puja. For any
+							pricing details or special requirements, please contact us directly through the "Contact Us"
+							page, and we will provide you with a tailored quote.
 						</p>
 					</div>
 				</div>
@@ -427,15 +479,15 @@
 
 
 	<!-- Start Video Area -->
-	<section class="video-area pt-40 pb-40">
-		<div class="overlay overlay-bg"></div>
+	<section>
 		<div class="container">
 			<div class="video-content">
-				<a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="play-btn"><img src="img/play-btn.png"
-						alt=""></a>
-				<div class="video-desc">
-					<h3 class="h2 text-white text-uppercase">Being unique is the preference</h3>
-					<h4 class="text-white">Youtube video will appear in popover</h4>
+				<div class="video-wrapper" style="display-size: cover ;">
+					<iframe
+						src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2Fnitesh.vibhushan%2Fvideos%2F838095071519362%2F&show_text=false&width=560&t=0"
+						frameborder="0" allowfullscreen="true"
+						allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+						allowFullScreen="true"></iframe>
 				</div>
 			</div>
 		</div>
@@ -444,56 +496,22 @@
 
 
 	<!-- Start logo Area -->
-	<section class="logo-area">
+	<!-- <section class="logo-area">
 		<div class="container">
 			<div class="row">
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- End logo Area -->
 
 
 	<!-- start contact Area -->
-	<section class="contact-area section-gap" id="contact">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-8">
-					<div class="title text-center">
-						<h1 class="mb-10">If you need, Just drop us a line</h1>
-						<p>Who are in extremely love with eco friendly system.</p>
-					</div>
-				</div>
-			</div>
-			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
-				<div class="row">
-					<div class="col-lg-6 form-group">
-						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
-							onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control"
-							required="" type="text">
-
-						<input name="email" placeholder="Enter email address"
-							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
-							onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control"
-							required="" type="email">
-
-						<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''"
-							onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control"
-							required="" type="text">
-					</div>
-					<div class="col-lg-6 form-group">
-						<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege"
-							onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
-							required=""></textarea>
-						<button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
-						<div class="alert-msg">
-						</div>
-					</div>
-				</div>
-			</form>
-
-		</div>
-	</section>
+	<!-- Calendly inline widget begin -->
+	<div id="contact" class="calendly-inline-widget" data-url="https://calendly.com/pt-niteshjisharma/30min?primary_color=ff4900"
+		style="min-width:320px;height:750px; padding-top: 50px; padding-bottom: 50px;"></div>
+	<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+	<!-- Calendly inline widget end -->
 	<!-- end contact Area -->
 
 	<!-- start footer Area -->
@@ -502,63 +520,41 @@
 			<div class="row">
 				<div class="col-lg-5 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h6>About Us</h6>
+						<h6>About Developer</h6>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-							ut labore dolore magna aliqua.
+							BigInIT Technologies is your ultimate destination for turning your business dreams into
+							reality. We offer a complete suite of services tailored to fuel your entrepreneurial
+							journey. From cutting-edge development solutions to comprehensive branding and marketing
+							strategies, we provide everything your business needs to evolve into a thriving venture.
 						</p>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p class="footer-text">Copyright &copy;
 							<script>document.write(new Date().getFullYear());</script> All rights reserved | This
 							template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">Colorlib</a>
+								href="https://biginit.in" target="_blank">BigInIT</a>
 						</p>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
 				<div class="col-lg-5  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h6>Newsletter</h6>
-						<p>Stay update with our latest</p>
+						<h6></h6>
+						<p></p>
 						<div class="" id="mc_embed_signup">
 
-							<form target="_blank" novalidate="true"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get" class="form-inline">
 
-								<div class="d-flex flex-row">
-
-									<input class="form-control" name="EMAIL" placeholder="Enter Email"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-										required="" type="email">
-
-
-									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
-											aria-hidden="true"></i></button>
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-											type="text">
-									</div>
-
-									<!-- <div class="col-lg-4 col-md-4">
-												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-											</div>  -->
-								</div>
-								<div class="info"></div>
-							</form>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
 					<div class="single-footer-widget">
 						<h6>Follow Us</h6>
-						<p>Let us be social</p>
+						<p>Let us be social<br> Pt. Nitesh sharma</p>
 						<div class="footer-social d-flex align-items-center">
 							<a href="https://www.facebook.com/share/bqD2tqWt3RTj75WM/?mibextid=qi2Omg"><i
 									class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
+							<!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+
 						</div>
 					</div>
 				</div>
